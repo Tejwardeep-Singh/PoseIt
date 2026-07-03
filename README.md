@@ -1,4 +1,4 @@
-````markdown
+
 <p align="center">
   <img src="assets/banner.png" alt="PoseIt Banner" width="100%">
 </p>
@@ -168,7 +168,6 @@ Includes:
 
 # 📂 Project Structure
 
-```text
 poseit/
 ├── index.html
 ├── css/
@@ -192,7 +191,6 @@ poseit/
 │   ├── poses/
 │   └── banner.png
 └── README.md
-````
 
 ---
 
