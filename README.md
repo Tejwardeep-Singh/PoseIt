@@ -1,62 +1,172 @@
-# PoseIt - AI Photography Assistant
+````markdown
+<p align="center">
+  <img src="assets/banner.png" alt="PoseIt Banner" width="100%">
+</p>
 
-PoseIt is a browser-only AI camera app that guides a person into polished portrait poses, compares live body landmarks against target poses, and captures a high-quality photo when the pose, face framing, and lighting are ready.
+<h1 align="center">📸 PoseIt</h1>
 
-## Features
+<p align="center">
+  <strong>Your AI Photography Assistant</strong>
+</p>
 
-- Real-time webcam preview with MediaPipe Pose skeleton rendering
-- Ten predefined target poses with normalized joint-angle matching
-- Semi-transparent ghost skeleton, joint correctness colors, and movement arrows
-- Live pose similarity score from 0-100%
-- Guidance for arms, shoulders, head tilt, body position, distance, framing, and lighting
-- Face detection and centering checks with MediaPipe Face Detection
-- Automatic capture at 95%+ pose match when face, framing, and lighting are valid
-- Manual shutter capture, animated countdown, preview screen, retake, and download
-- Optional filters: Original, Warm, Cool, Portrait, Black & White, and Vintage
-- Settings for skeletons, ghost pose, auto capture, countdown, mirroring, overlay download, filters, and dark mode
-- Fully responsive layout for desktop and mobile browsers
+<p align="center">
+  Guide your pose • Capture perfect portraits • Download instantly
+</p>
 
-## Screenshots
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/MediaPipe-4285F4?style=for-the-badge">
+  <img src="https://img.shields.io/badge/OpenCV.js-5C3EE8?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
+</p>
 
-Add screenshots of the camera view, guidance state, and preview screen here after running PoseIt locally.
+---
 
-## Technology Stack
+# ✨ Overview
 
-- HTML5
-- CSS3
-- Vanilla JavaScript with ES6 modules
-- MediaPipe Pose
-- MediaPipe Face Detection
-- HTML5 Canvas
-- Browser Camera API, `getUserMedia`
+**PoseIt** is an AI-powered photography assistant that runs entirely in your browser.
 
-## Installation
+Using **MediaPipe Pose** and **Face Detection**, PoseIt analyzes your body posture in real time, compares it with professional poses, provides intelligent guidance, and automatically captures your photo when everything is perfectly aligned.
 
-No package installation is required. PoseIt is a static web app.
+No backend.
+No uploads.
+No cloud processing.
 
-## How To Run
+Everything happens locally on your device.
 
-Run the project through a local development server so ES modules and camera permissions work correctly.
+---
 
-With VS Code Live Server:
+# 🚀 Features
 
-1. Open this folder in VS Code.
-2. Start Live Server from `index.html`.
-3. Allow camera permission in the browser.
+## 📷 Smart Camera
 
-With Python:
+- Live webcam preview
+- Front & rear camera support (mobile)
+- Mirror preview for selfie mode
+- High-quality image capture
+- Manual shutter
+- Automatic shutter
 
-```bash
-python -m http.server 5500
-```
+---
 
-Then open:
+## 🤖 AI Pose Detection
 
-```text
-http://localhost:5500
-```
+- Real-time MediaPipe Pose tracking
+- 33 body landmarks
+- Live skeleton rendering
+- Ghost pose overlay
+- Pose similarity scoring (0–100%)
+- Joint angle comparison
+- Real-time pose correction
 
-## Project Structure
+---
+
+## 🎯 Intelligent Guidance
+
+Receive live feedback such as:
+
+- Raise your left arm
+- Lower your right shoulder
+- Straighten your back
+- Tilt your head
+- Move left/right
+- Move closer to the camera
+- Step back slightly
+- Hold still
+- Perfect pose detected
+
+---
+
+## 😊 Face & Framing Analysis
+
+- Face detection
+- Face centering
+- Framing assistance
+- Distance estimation
+- Body visibility checks
+- Head orientation guidance
+
+---
+
+## 💡 Lighting Analysis
+
+Detects poor lighting and provides suggestions such as:
+
+- Too dark
+- Move toward the light
+- Lighting looks great
+
+---
+
+## 📸 Smart Capture
+
+Automatically captures the photo when:
+
+- Pose similarity ≥ 95%
+- Face detected
+- Subject centered
+- Lighting acceptable
+
+Includes:
+
+- Animated countdown
+- Manual capture
+- Retake
+- Preview screen
+
+---
+
+## 🎨 Photo Filters
+
+- Original
+- Warm
+- Cool
+- Portrait
+- Black & White
+- Vintage
+
+---
+
+## 💾 Export
+
+- High-resolution image capture
+- Download as PNG
+- No server required
+- Instant download
+
+---
+
+## ⚙️ Settings
+
+- Skeleton overlay
+- Ghost pose
+- Auto capture
+- Countdown
+- Mirror preview
+- Overlay in exported photo
+- Filters
+- Dark mode
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Frontend | HTML5 |
+| Styling | CSS3 |
+| Language | JavaScript (ES6 Modules) |
+| Pose Detection | MediaPipe Pose |
+| Face Detection | MediaPipe Face Detection |
+| Graphics | HTML5 Canvas |
+| Camera | Browser Camera API |
+| Image Processing | OpenCV.js (Optional) |
+
+---
+
+# 📂 Project Structure
 
 ```text
 poseit/
@@ -78,23 +188,106 @@ poseit/
 │   └── utils.js
 ├── assets/
 │   ├── icons/
+│   ├── logo/
 │   ├── poses/
-│   └── logo/
+│   └── banner.png
 └── README.md
+````
+
+---
+
+# ⚡ Getting Started
+
+## Clone the repository
+
+```bash
+git clone https://github.com/yourusername/poseit.git
 ```
 
-## Browser Notes
+```bash
+cd poseit
+```
 
-Camera access generally requires `localhost` or HTTPS. Mobile browsers may offer front and rear cameras; the switch button requests the alternate camera when available. MediaPipe model files are loaded in the browser from the official npm CDN package.
+---
 
-## Future Improvements
+## Run Locally
 
-- Add Face Mesh for eye-open and smile checks
-- Save custom poses from a live frame
-- Add a gallery for multiple captures
-- Add camera exposure and white-balance hints where supported
-- Add PWA offline caching for app shell assets
+### VS Code
 
-## License
+1. Install **Live Server**
+2. Open the project
+3. Right-click `index.html`
+4. Select **Open with Live Server**
+5. Allow camera permission
 
-MIT
+### Python
+
+```bash
+python -m http.server 5500
+```
+
+Open:
+
+```
+http://localhost:5500
+```
+
+---
+
+# 📱 Browser Support
+
+* ✅ Google Chrome
+* ✅ Microsoft Edge
+* ✅ Mozilla Firefox
+* ✅ Safari
+* ✅ Android Chrome
+* ✅ iOS Safari
+
+> Camera access requires **HTTPS** or **localhost**.
+
+---
+
+# 📸 Screenshots
+
+Replace these placeholders after completing the project.
+
+| Home           | Pose Guidance  |
+| -------------- | -------------- |
+| *(Screenshot)* | *(Screenshot)* |
+
+| Ghost Pose     | Preview        |
+| -------------- | -------------- |
+| *(Screenshot)* | *(Screenshot)* |
+
+---
+
+# 🗺 Roadmap
+
+* Face Mesh integration
+* Smile detection
+* Eye-open detection
+* AI pose recommendations
+* Custom pose library
+* Group pose guidance
+* Offline PWA support
+* AI composition suggestions
+* Background quality analysis
+* Cloud photo gallery
+* Camera exposure analysis
+
+---
+
+# 🤝 Contributing
+
+Contributions, feature requests, and suggestions are welcome.
+
+Feel free to fork the project and submit a pull request.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
