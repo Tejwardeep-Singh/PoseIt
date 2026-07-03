@@ -1,0 +1,251 @@
+.icon-button,
+.secondary-button,
+.ghost-button,
+.primary-button {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  min-height: 44px;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.icon-button {
+  display: grid;
+  width: 44px;
+  place-items: center;
+  font-size: 1.24rem;
+}
+
+.icon-button:hover,
+.secondary-button:hover,
+.ghost-button:hover,
+.primary-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(78, 224, 180, 0.55);
+}
+
+.control-rail {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.status-panel,
+.filter-panel,
+.settings-dialog {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.status-panel,
+.filter-panel {
+  padding: 16px;
+}
+
+.match-ring {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.match-ring svg {
+  width: 118px;
+  height: 118px;
+  transform: rotate(-90deg);
+}
+
+.ring-bg,
+.ring-value {
+  fill: none;
+  stroke-width: 10;
+}
+
+.ring-bg {
+  stroke: rgba(255, 255, 255, 0.12);
+}
+
+.ring-value {
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-dasharray: 326.73;
+  stroke-dashoffset: 326.73;
+  transition: stroke-dashoffset 180ms ease, stroke 180ms ease;
+}
+
+.match-ring strong {
+  display: block;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1;
+}
+
+.match-ring span,
+.field-label,
+.signal-grid span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 680;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.field-label {
+  display: block;
+  margin: 0 0 8px;
+}
+
+.pose-select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(3, 8, 10, 0.72);
+  color: var(--text);
+  padding: 0 12px;
+}
+
+.guidance-box {
+  min-height: 86px;
+  display: grid;
+  align-items: center;
+  margin: 14px 0;
+  padding: 14px;
+  border: 1px solid rgba(78, 224, 180, 0.22);
+  border-radius: var(--radius);
+  background: rgba(78, 224, 180, 0.09);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.signal-grid div {
+  min-height: 68px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.signal-grid strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 0.95rem;
+}
+
+.capture-dock {
+  display: grid;
+  place-items: center;
+  min-height: 76px;
+  pointer-events: none;
+}
+
+.shutter-button {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+}
+
+.shutter-button span {
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: #fff;
+  transition: transform 150ms ease;
+}
+
+.shutter-button:active span {
+  transform: scale(0.84);
+}
+
+.preview-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button {
+  padding: 0 18px;
+  font-weight: 720;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: #05110d;
+  border-color: transparent;
+}
+
+.settings-dialog {
+  width: min(92vw, 460px);
+  color: var(--text);
+  padding: 0;
+}
+
+.settings-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.dialog-head h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.settings-list {
+  display: grid;
+  gap: 6px;
+  padding: 10px 16px 16px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  color: var(--text);
+}
+
+.toggle-row input {
+  width: 44px;
+  height: 24px;
+  accent-color: var(--accent);
+}
+
+body.light-mode {
+  color-scheme: light;
+  --bg: #f5f8f5;
+  --panel: rgba(255, 255, 255, 0.76);
+  --panel-strong: rgba(255, 255, 255, 0.95);
+  --text: #10201e;
+  --muted: #52635f;
+  --line: rgba(9, 18, 22, 0.18);
+  background:
+    radial-gradient(circle at top left, rgba(78, 224, 180, 0.2), transparent 32rem),
+    linear-gradient(135deg, #f7faf7 0%, #e6efea 52%, #f1eee6 100%);
+}
